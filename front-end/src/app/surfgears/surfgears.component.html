@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="surfgears.component.css">
+<main>
+    <h1>Surfgears</h1>
+    <div class="surfgears" *ngFor="let surfgear of surfgears">   
+        <div class="row" *ngIf="surfgear">
+            
+            <img [src]="'/assets' + surfgear.images" alt="surfgears">
+            <div class="info">
+                <h3 class = "name">{{ surfgear.name }}</h3>
+                <h3>price : {{surfgear.price}} </h3>
+                <p> <span> description </span> : {{surfgear.description}} </p>
+                <a href="contact-us"><button class="btn-details"> buy now </button></a>
+            </div>
+        </div>
+    </div>
+</main>

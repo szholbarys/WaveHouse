@@ -4,17 +4,19 @@
         <h1>REGISTER HERE</h1><br>
         <p>Welcome to our club! Please enter your details.</p>
 <!-- this part connect with js -->
-      <h4>Name</h4>
-      <input class="input" type="text"  placeholder="Enter your name">
+<form #usersForm="ngForm" (ngSubmit)="getUserFormUser(usersForm.value)">
+<h4>Name</h4>
+      <input [(ngModel)]="name" class="input" type="text"  placeholder="Enter your name">
 
       <h4>Phone number</h4>
-      <input class="input" type="number"  placeholder="Enter your phone number">
+      <input [(ngModel)]="number" class="input" type="number"  placeholder="Enter your phone number">
+
         <h4>Email</h4>
-        <input  class="input" type="email" placeholder="Enter your email" id="contact-email" onkeyup="validateEmail()" >
+        <input [(ngModel)]="email" class="input" type="email" placeholder="Enter your email" id="contact-email" onkeyup="validateEmail()" >
         <span id="email-error"></span>
 
         <h4>Password</h4>
-        <input class="input" type="password" minlength="8" placeholder="Enter your password">
+        <input [(ngModel)]="password" class="input" type="password" minlength="8" placeholder="Enter your password">
 
         <div class="checkbox">
             <div class="check">
@@ -23,9 +25,10 @@
             </div>
             <span>Forgot password?</span>
         </div>
-        <button type="submit" class="sign" (click)="save()">Sign up</button>
-        <button type="submit" class="google"> <img src="../../assets/img/google-logo.png" alt="google icon" width="20px"> <span> Sign in
-                with Google </span> </button>
+        <button type="submit" class="sign" (click)="save()"> Sign up</button>
+    </form>
+        <!-- <button type="submit" class="google"> <img src="../../assets/img/google-logo.png" alt="google icon" width="20px"> <span> Sign in
+                with Google </span> </button> -->
         <p class="signupfree"> already has account <a href="jwt"><span>Sign in</span></a> </p>
     </div>
 

@@ -1,0 +1,29 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Comfortaa&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="wetsuits.component.css">
+
+<main>
+    <!-- <h1>Wetsuits</h1> -->
+<div class="wetsuit">
+    <button>Wetsuits</button>
+</div>
+    <div class="categories">
+        <ul>
+            <li><button (click)="getMenWetsuits()">Mens</button></li>
+            <li><button (click)="getWomenWetsuits()">Womens</button></li>
+        </ul>
+    </div>
+    <div class="wetsuits" *ngFor="let wetsuit of wetsuits">   
+        <div class="row" *ngIf="wetsuit">
+            <img [src]="'../assets' + wetsuit.images" alt="wetsuits">
+            <div class="info">
+                <h3>category : {{wetsuit.category}}</h3>
+                <h3 class = "name">{{ wetsuit.name }}</h3>
+                <h3>price : {{wetsuit.price}} </h3>
+                <p> <span> description </span> : {{wetsuit.description}} </p>
+                <a href="contact-us"> <button class="btn-details"> buy now </button></a>
+            </div>
+        </div>
+    </div>
+</main>

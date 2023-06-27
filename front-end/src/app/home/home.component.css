@@ -26,8 +26,15 @@
     text-decoration: none;
     color: #fff;
   }
+  .navbar ul li a:hover{
+    text-decoration: none;
+    color: rgb(216, 108, 0);
+  }
   .navbar ul li a span{
     color: rgb(0, 0, 0);
+  }
+  .navbar ul li a span:hover{
+    color: rgb(216, 108, 0);
   }
   main{
     width: 100%;
@@ -78,7 +85,7 @@
     margin-top: 100px;
   }
   .description p{
-    font-size: 20px;
+    font-size: 23px;
     font-family: 'Comfortaa', cursive;
     color: #fff;
     height: 100px;
@@ -105,6 +112,9 @@
       width: 710px;
       height: 108px;
       opacity: 0.8;
+  }
+  .surfboards-shop p span{
+    font-size: 30px;
   }
   .btn-buy{
       top: 220px;
@@ -141,6 +151,9 @@
       margin-top: 100px;
       position: relative;
       opacity: 0.8;
+  }
+  .surfing-club p span{
+    font-size: 30px;
   }
   .btn-join-us{
       width: 170px;

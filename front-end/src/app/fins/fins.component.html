@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="fins.component.css">
+<main>
+    <h1>Fins</h1>
+    <div class="fins" *ngFor="let fin of fins">   
+        <div class="row" *ngIf="fin">
+            
+            <img [src]="'/assets' + fin.images" alt="fins">
+            <div class="info">
+                <h3 class = "name">{{ fin.name }}</h3>
+                <h3>price : {{fin.price}} </h3>
+                <p> <span> description </span> : {{fin.description}} </p>
+                <a href="contact-us"><button class="btn-details"> buy now </button></a>
+            </div>
+        </div>
+    </div>
+</main>

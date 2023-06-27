@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="products.component.css">
+<main>
+    <h1>Available Surfboards</h1>
+    <div class="products" *ngFor="let product of products">   
+        <div class="row" *ngIf="product">
+            
+            <img [src]="'/assets' + product.images" alt="products">
+            <div class="info">
+                <h3 class = "name">{{ product.name }}</h3>
+                <h3>rating : {{product.rating}}</h3>
+                <h3>price : {{product.price}} </h3>
+                <p> <span> description </span> : {{product.description}} </p>
+                <a href="contact-us"><button class="btn-details"> buy now </button></a>
+            </div>
+        </div>
+    </div>
+</main> 
